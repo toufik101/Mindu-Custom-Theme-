@@ -3,7 +3,7 @@
    $header_button_text= $mindu['header-button'] ?? 'Reade More';
    $header_button_url= $mindu['header-button-url'] ?? "#";
    $header_right_switch = $mindu['header-right-switcher'] ?? '';
-   $header1_col_expand = $header_right_switch == true?'col-xxl-8 col-xl-7 d-none d-xl-block': 'col-xxl-10 col-xl-10 d-none d-xl-block';
+   $header1_col_expand = $header_right_switch == true?'col-xxl-8 col-xl-7 d-none d-xl-block': 'col-xxl-9 col-xl-10 d-none d-xl-block';
    $header1_end_pos = $header_right_switch == true?'tp-header-left d-flex align-items-center justify-content-center': 'tp-header-left d-flex align-items-center justify-content-end';
   ?>
   

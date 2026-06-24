@@ -220,3 +220,22 @@
             )
         ) 
     );
+        Redux::set_section( 
+        $opt_name, 
+        array(
+            'title'  => esc_html__( 'Footer Copyright', 'mindu' ),
+            'id'     => 'footer-copyrights',
+            'desc'   => esc_html__( 'Footer Copyrights Text.', 'mindu' ),
+            'icon'   => 'el el-home',
+            'fields' => array(
+                        array(
+                                'id'       => 'footer-copyright-text',
+                                'type'     => 'text', 
+                                'title'    => esc_html__('Footer Copyright Text', 'mindu'),
+                                'desc'     => esc_html__('Enter the copyright text for the footer.', 'mindu'),
+                                'subtitle' => esc_html__('Provide the copyright information for the footer section.', 'mindu'),
+                                'default'  => esc_html__('© 2026 Copyrights by aqlova Co. All Rights Reserved. Developed by ThemePure.','mindu'),
+                            ),
+     )
+ )
+);

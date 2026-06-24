@@ -45,7 +45,8 @@ function mindu_setup() {
 
 	register_nav_menus( array(
 		'main-menu'=> __('Main Menu', 'mindu'),
-		'Language_Menu'=> __('Language Option Menu', 'mindu')
+		'Language_Menu'=> __('Language Option Menu', 'mindu'),
+		'Footer_Menu'=> __('Footer Menu', 'mindu')
 	));
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -64,6 +65,8 @@ function mindu_setup() {
 		 'image', 'video', 'quote', 'gallery',  'audio'
 	) );
 
+	remove_theme_support('widgets-block-editor');
+
 }
 endif; 
 
@@ -71,7 +74,79 @@ endif;
 add_action( 'after_setup_theme', 'mindu_setup' );
 
 
-
+/**
+ * Add a sidebar.
+ */
+function mindu_footer_widgets() {
+	register_sidebar( 
+		array(
+		'name'          => __( 'Footer-1 : Widget-1 ', 'mindu' ),
+		'id'            => 'footer1-widget-1',
+		'description'   => __( 'Footer widget 1 Information.', 'mindu' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget mb-30 wow fadeInUp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title text-white mb-20">',
+		'after_title'   => '</h3>',
+	)
+	);
+	register_sidebar( 
+		array(
+		'name'          => __( 'Footer-2 : Widget-2 ', 'mindu' ),
+		'id'            => 'footer2-widget-2',
+		'description'   => __( 'Footer widget 2 Information.', 'mindu' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget ml-80 mb-30 wow fadeInUp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title text-white mb-20">',
+		'after_title'   => '</h3>',
+	)
+	);
+	register_sidebar( 
+		array(
+		'name'          => __( 'Footer-3 : Widget-3 ', 'mindu' ),
+		'id'            => 'footer3-widget-3',
+		'description'   => __( 'Footer widget 3Information.', 'mindu' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget ml-80 mb-30 wow fadeInUp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title text-white mb-20">',
+		'after_title'   => '</h3>',
+	)
+	);
+	register_sidebar( 
+		array(
+		'name'          => __( 'Footer-4 : Widget-4 ', 'mindu' ),
+		'id'            => 'footer4-widget-4',
+		'description'   => __( 'Footer widget 4 Information.', 'mindu' ),
+		'before_widget' => '<div id="%1$s" class="tp-footer-widget ml-80 mb-30 wow fadeInUp %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-footer-title text-white mb-20">',
+		'after_title'   => '</h3>',
+	)
+	);
+	//Blog Post Sidebar 
+	register_sidebar( 
+		array(
+		'name'          => __( 'BlogPost-Widget ', 'mindu' ),
+		'id'            => 'blogpost-widget-1',
+		'description'   => __( 'Blog post widget 1 Information.', 'mindu' ),
+		'before_widget' => '<div id="%1$s" class="tp-sidebar-service-list tp-sidebar-border pb-30 mb-35 %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-sidebar-service-title mb-20 tp-ff-body">',
+		'after_title'   => '</h3>',
+	)
+	);
+	register_sidebar( 
+		array(
+		'name'          => __( 'BlogPost-Tag-Widget ', 'mindu' ),
+		'id'            => 'blogpost-tag-widget',
+		'description'   => __( 'Blog post Tag widget Information.', 'mindu' ),
+		'before_widget' => '<div id="%1$s" class="tp-sidebar-widget tp-sidebar-border pb-30 mb-50 %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="tp-sidebar-service-title mb-20 tp-ff-body">',
+		'after_title'   => '</h3>',
+	)
+	);
+}
+add_action( 'widgets_init', 'mindu_footer_widgets' );
 
 function add_theme_scripts() {
 

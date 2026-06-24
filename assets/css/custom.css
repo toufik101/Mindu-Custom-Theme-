@@ -1,3 +1,4 @@
+
 .tp-lang-nav ul li {
   position: relative;
 }
@@ -33,4 +34,15 @@
 .tp-lang-nav ul li:hover .sub-menu{
   visibility: visible !important;
   opacity: 1;
+}
+
+.tp-blog-thumb img {
+    min-width: 100%;
+    object-fit: cover;
+}
+
+/* Blog Post */
+.tp-sidebar-service-list ul li {
+    display: flex;
+    justify-content: space-between;
 }
